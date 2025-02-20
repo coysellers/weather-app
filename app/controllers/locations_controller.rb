@@ -11,11 +11,10 @@ class LocationsController < ApplicationController
     @location = Location.new(location_params)
     
     if @location.save
-      redirect_to locations_path, notice: 'Location was successfully added'
-      # respond_to do |format|
-      #   format.html { redirect_to quotes_path, notice: "Quote was successfully created." }
-      #   format.turbo_stream
-      # end
+      respond_to do |format|
+        format.turbo_stream { redirect_to locations_path, notice: 'Location was successfully added' }
+        format.html { redirect_to locations_path, notice: 'Location was successfully added' }
+      end
     else
       render :new, status: :unprocessable_entity
     end
@@ -24,17 +23,17 @@ class LocationsController < ApplicationController
   def show
     @location = Location.find(params[:id])
     
-    begin
-      @forecast = @location.seven_day_forecast
-    rescue StandardError => e
-      redirect_to locations_path, alert: "Error fetching forecast: #{e.message}"
-    end
+    @forecast = @location.seven_day_forecast
   end
 
   def destroy
     @location = Location.find(params[:id])
     @location.destroy
-    redirect_to locations_path, notice: 'Location was successfully removed'
+
+    respond_to do |format|
+      format.turbo_stream { redirect_to locations_path, notice: 'Location was successfully removed' }
+      format.html { redirect_to locations_path, notice: 'Location was successfully removed' }
+    end
   end
 
   private

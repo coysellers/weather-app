@@ -1,0 +1,5 @@
+<%= turbo_stream.append "notices", target: "flash" do %>
+  <div class="bg-green-50 text-green-800 p-4 rounded-lg shadow-lg mb-4">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
