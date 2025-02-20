@@ -2,13 +2,14 @@
 
 <img width="1313" alt="Screenshot 2025-02-20 at 9 35 52 AM" src="https://github.com/user-attachments/assets/db634aef-f22f-444e-abaf-009084fcf7e3" />
 
+----
 
 Run:
-`bundler`
-`rails db:migrate`
-`bin/rails server`
-in new tab: `bin/rails tailwindcss:watch` # To compile style
-in new tab: `yarn build:watch` # to compile the javascirpt
+* `bundler`
+* `rails db:migrate`
+* `bin/rails server`
+* in new tab: `bin/rails tailwindcss:watch` # To compile style
+* in new tab: `yarn build:watch` # to compile the javascirpt
 
 Run tests with: `bundle exec rspec`
 
@@ -16,13 +17,13 @@ visit: http://localhost:3000/
 
 Quick test data:
 Addresses:
-Memphis
-239 Greene St New York, NY 10003
-Austin
+* Memphis
+* 239 Greene St New York, NY 10003
+* Austin
 
 IP Addresses:
-34.21.9.50
-192.168.1.1
+* 34.21.9.50
+* 192.168.1.1
 
 
 
