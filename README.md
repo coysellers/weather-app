@@ -1,5 +1,8 @@
 # Weather App
 
+<img width="1313" alt="Screenshot 2025-02-20 at 9 35 52 AM" src="https://github.com/user-attachments/assets/db634aef-f22f-444e-abaf-009084fcf7e3" />
+
+
 Run:
 `bundler`
 `rails db:migrate`
