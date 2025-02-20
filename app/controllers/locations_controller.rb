@@ -12,6 +12,10 @@ class LocationsController < ApplicationController
     
     if @location.save
       redirect_to locations_path, notice: 'Location was successfully added'
+      # respond_to do |format|
+      #   format.html { redirect_to quotes_path, notice: "Quote was successfully created." }
+      #   format.turbo_stream
+      # end
     else
       render :new, status: :unprocessable_entity
     end

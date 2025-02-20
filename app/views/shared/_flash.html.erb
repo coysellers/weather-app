@@ -1,0 +1,9 @@
+<% if flash.any? %>
+  <div id="flash-messages" class="absolute top-0 right-0 z-50"  data-controller="flash">
+    <% flash.each do |_type, message| %>
+      <div class="bg-green-50 text-green-800 p-4 rounded-lg shadow-lg mb-4">
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
