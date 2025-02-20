@@ -17,6 +17,9 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem 'geocoder'
+gem 'http'
+
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
@@ -42,8 +45,11 @@ gem "thruster", require: false
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'capybara'
   gem 'factory_bot_rails'
-  
+  gem 'faker'
+  gem 'shoulda-matchers'
+
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
@@ -59,3 +65,7 @@ group :development do
   gem "web-console"
 end
 
+
+gem "tailwindcss-ruby", "~> 4.0"
+
+gem "tailwindcss-rails", "~> 4.1"
